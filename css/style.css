@@ -4,11 +4,11 @@ body {
   margin: 0;
   padding: 0;
   background: #29ec5a;
+  background-size: cover;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  height: 100vh;
 }
 a {
   margin-top: 300px;
@@ -24,6 +24,7 @@ a {
   border-radius: 50px;
   background: linear-gradient(90deg, #049bff, #ff2ce2);
   box-shadow: 5px 10px #1b1b1b;
+  height: min-content;
 }
 
 span {
