@@ -1,4 +1,4 @@
-
+const copy = document.getElementById('copy');
 let color = ["#40E0D0","#FF7F50","#6495ED","#FFBF00","#DE3163","#FFA600","#B200FF","#FF005D","#5694EE","#72E824"];
 let i = 0;
 document.querySelector("a").addEventListener("click", () => {
@@ -8,7 +8,6 @@ document.querySelector("a").addEventListener("click", () => {
 
 const button = document.querySelector('a');
 button.addEventListener('click', function(e){
-
     let x = e.clientX - e.target.offsetLeft;
     let y = e.clientY - e.target.offsetTop;
 
@@ -21,3 +20,15 @@ button.addEventListener('click', function(e){
          ripples.remove()
         },1000);
      })
+
+let copyTimeout;
+copy.onclick = async ev => {
+    clearTimeout(copyTimeout);
+    try {
+        await navigator.clipboard.writeText(color[i]);
+        ev.target.innerText = "Copied to clipboard";
+    } catch (e) {
+        ev.target.innerText = "Unable to copy";
+    }
+    copyTimeout = setTimeout(() => ev.target.innerText = "Click to copy color", 1200);
+};
