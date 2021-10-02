@@ -10,8 +10,13 @@ body {
   align-items: center;
   flex-direction: column;
 }
-a {
+.main{
   margin-top: 300px;
+}
+.box{
+  margin-left: 45px;
+}
+a {
   font-family: "poppins";
   position: relative;
   display: inline-block;
@@ -22,11 +27,11 @@ a {
   text-transform: uppercase;
   font-size: 50px;
   border-radius: 50px;
-  background: linear-gradient(90deg, #049bff, #ff2ce2);
+  background: linear-gradient(100deg, #049bff, #ff2ce2);
   box-shadow: 5px 10px #1b1b1b;
+  cursor:pointer;
 }
-
-span {
+span{
   position: absolute;
   background: #fff;
   transform: translate(-50%, -50%);
@@ -34,7 +39,13 @@ span {
   border-radius: 50%;
   animation: animate 1s linear infinite;
 }
-
+input[type=text]{
+  width: 80%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 @keyframes animate {
   0% {
     width: 0px;
