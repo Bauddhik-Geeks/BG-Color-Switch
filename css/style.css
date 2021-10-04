@@ -28,10 +28,10 @@ a {
   overflow: hidden;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 50px;
+  font-size:2.3rem;
   border-radius: 50px;
   background: linear-gradient(100deg, #049bff, #ff2ce2);
-  box-shadow: 5px 10px #1b1b1b;
+  box-shadow: 5px 10px #383636;
   height: min-content;
   cursor:pointer;
 }
